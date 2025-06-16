@@ -21,11 +21,7 @@ connectMDB("mongodb+srv://yugsudani88:51eyEtbsD1BtLLYf@cluster0.zd6tiy0.mongodb.
 
 
 // Enabling frontend backend communications
-//app.use(cors()); // allows all origins
-app.use(cors({
-  origin: "https://ecart-vjnr.onrender.com", // your React site
-  credentials: true
-}));
+app.use(cors()); // allows all origins
 app.use(express.json());
 app.use(cookieParser());
 
