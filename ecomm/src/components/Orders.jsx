@@ -15,7 +15,7 @@ const Orders=()=>{
     const get_existing_orders=async()=>{
 
 
-        const response = await fetch("http://localhost:3000/admin/ordersOfUser",{
+        const response = await fetch("https://ecart-backend-dczo.onrender.com/admin/ordersOfUser",{
             method:"GET"
         });
 
@@ -40,7 +40,7 @@ const Orders=()=>{
     
     const mark_as_deliverd=async(order_id)=>{
         
-        const response = await fetch("http://localhost:3000/admin/mark_as_delivered",{
+        const response = await fetch("https://ecart-backend-dczo.onrender.com/admin/mark_as_delivered",{
             method:"POST",
             headers:
             {"Content-Type": "application/json"},
