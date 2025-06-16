@@ -17,7 +17,7 @@ const { isLogin } = require("./middelware/isLogin");
 const { isAdmin } = require("./middelware/isAdmin");
 
 //connection
-connectMDB("mongodb://127.0.0.1:27017/eComm");
+connectMDB("mongodb+srv://yugsudani88:51eyEtbsD1BtLLYf@cluster0.zd6tiy0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 
 
 // Enabling frontend backend communications
