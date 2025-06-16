@@ -17,7 +17,7 @@ const HomeCat1=()=>{
     
     const GetProductByCat=async()=>{
 
-        const products = await fetch("http://localhost:8000/product/getprdbycategory?category=menclothing",{
+        const products = await fetch("https://ecart-backend-dczo.onrender.com/product/getprdbycategory?category=menclothing",{
             method:"GET",
         });
 
@@ -41,7 +41,7 @@ const HomeCat1=()=>{
       
       
                 const UpdateGenCtxt=async()=>{                 // function that gets user details and set context ct
-                    const details = await fetch("http://localhost:3000/surfing/userinfo" , {
+                    const details = await fetch("https://ecart-backend-dczo.onrender.com/surfing/userinfo" , {
                     method:"GET"
                 });
                 
@@ -69,7 +69,7 @@ const HomeCat1=()=>{
         
             const prdid = prd_id
                                                                             // it sets new prdid into user's cartprdid
-            const response = await fetch("http://localhost:3000/add_to_cart" ,{
+            const response = await fetch("https://ecart-backend-dczo.onrender.com/add_to_cart" ,{
                                 method:"POST",
                                 headers:{
                                 "Content-Type": "application/json"
