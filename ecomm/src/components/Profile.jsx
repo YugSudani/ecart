@@ -18,7 +18,7 @@ const Profile=()=>{
     //gets user Info from database
     const[userDetils,setUserDetails] = useState({});
     const GetUserDetails=async()=>{
-        const details = await fetch("http://localhost:3000/surfing/userinfo" , {
+        const details = await fetch("https://ecart-backend-dczo.onrender.com/surfing/userinfo" , {
             method:"GET"
         });
         const datas = await details.json();
@@ -58,7 +58,7 @@ const Profile=()=>{
         const updateEmail=async(e)=>{
             e.preventDefault();
             
-            const response = await fetch("http://localhost:3000/surfing/updateEmail" ,{
+            const response = await fetch("https://ecart-backend-dczo.onrender.com/surfing/updateEmail" ,{
                 method:"POST",
                   headers: {
                         "Content-Type": "application/json"
@@ -91,7 +91,7 @@ const Profile=()=>{
         const updatePassword=async(e)=>{
             e.preventDefault();
             
-            const response = await fetch("http://localhost:3000/surfing/updatepwd" , {
+            const response = await fetch("https://ecart-backend-dczo.onrender.com/surfing/updatepwd" , {
                 method:"POST",
                 headers:{
                      "Content-Type": "application/json"
@@ -116,7 +116,7 @@ const Profile=()=>{
         const[prds,setPrds]=useState([]);
         const get_orders=async()=>{
             
-            const response = await fetch("http://localhost:3000/surfing/myorders",{
+            const response = await fetch("https://ecart-backend-dczo.onrender.com/surfing/myorders",{
                 method:"GET"
             });
             
@@ -141,7 +141,7 @@ const Profile=()=>{
 
         const query = IDs.join(","); 
         // console.log("IDs: "+IDs);
-        const response = await fetch(`http://localhost:3000/product/getprdbyprdid?idData=${query}`, {
+        const response = await fetch(`https://ecart-backend-dczo.onrender.com/product/getprdbyprdid?idData=${query}`, {
             method:"GET"
         });
 
@@ -165,7 +165,7 @@ const Profile=()=>{
    
     //cancel Order
     const cancel_order=async(prdid)=>{
-        const response = await fetch("http://localhost:3000/surfing/cancelorder",{
+        const response = await fetch("https://ecart-backend-dczo.onrender.com/surfing/cancelorder",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json" 
