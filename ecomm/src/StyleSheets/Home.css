@@ -1,0 +1,68 @@
+.home_category_bar{
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:rgb(224, 255, 255);
+}
+
+.home_cat_container{
+    height: 100%;
+    width: 20vw;
+    text-align: center;
+}
+
+.home_cat_img{
+    height: 20vh;
+    width: 12vw;
+}
+
+.home_cat_img_women{
+    height: 20vh;
+    width: 18vw;
+}
+
+.home_cat_img_kids{
+    width:9vw;
+    height:16vh;
+    margin-top:12%;
+}
+
+.home_cat_link{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+@media only screen and (max-width:768px) {
+
+    .home_category_bar{
+        height: 70vh;
+        flex-wrap: wrap;
+    }
+    
+    .home_cat_container{
+        height: 20vh;
+        width: 40vw;
+        text-align: center;
+    }
+    
+    .home_cat_img{
+        height: 18vh;
+        width: 40vw;
+    }
+        
+    .home_cat_img_women{
+        height: 18vh;
+        width: 40vw;
+    }
+
+    .home_cat_img_kids{
+        width:21vw;
+        height:16vh;
+        margin-top:12%;
+    }
+
+}

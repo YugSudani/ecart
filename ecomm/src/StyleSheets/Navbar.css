@@ -1,0 +1,314 @@
+html,body{
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   background-color: azure;
+}
+
+
+.navbar_container{
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  background-color:rgb(188, 243, 243);
+}
+
+.navbar_left{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav_logo{
+  height: 90%;
+  width: 5vw;
+  margin-left: -5%;
+}
+
+.nav_searchbar{
+  height: 35%;
+  width: 65%;
+  border: none;
+  border: 2px solid skyblue;
+  border-radius: 7px;
+  background-color: rgb(227, 235, 243);
+  padding: 1%;
+  font-size: 16px;
+}
+
+
+.navbar_right{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.menu_for_phone{
+  display: none;
+}
+
+.btn_acc_nav{
+  background-color: transparent;
+  height: 7vh;
+  width: 8vw;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  font-size: 17px;
+}
+
+.btn_acc_nav:hover{
+  background-color: azure;
+  border: 2px solid skyblue;
+}
+
+.nav_dropdown_account_open{
+  position: absolute;
+  top:12%;
+  right: 25.5%;
+  background-color: azure;
+  border-radius: 5px;
+  width: 11vw;
+  animation: slideDown 0.5s ease forwards;
+  z-index: 1;
+  width: 10vw;
+  padding: 1%;
+}
+
+.nav_dropdown_account_open a{
+  text-decoration: none;
+  color: black;
+  margin: 5%;
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav_dropdown_account_close{
+  display: none;  
+}
+
+
+.btn_cart_nav{
+  background-color: transparent;
+  height: 7vh;
+  width: 8vw;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  font-size: 17px;
+}
+
+.btn_cart_nav:hover{
+  background-color: azure;
+  border: 2px solid skyblue;
+}
+.nav_dropdown_cart_open{
+  position: absolute;
+  top: 12%;
+  right: 14.5%;
+  background-color: azure;
+  border-radius: 5px;
+  width: 10vw;
+  animation: slideDown 0.5s ease forwards;
+  z-index: 1;
+  width: 8vw;
+  padding: 1%;
+}
+.nav_dropdown_cart_open a{
+  text-decoration: none;
+  color: black;
+  margin: 5%;
+}
+
+.nav_dropdown_cart_close{
+  display: none;
+}
+
+
+.btn_support_nav{
+  background-color: transparent;
+  height: 7vh;
+  width: 8vw;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  font-size: 17px;
+}
+
+.btn_support_nav:hover{
+  background-color: azure;
+  border: 2px solid skyblue;
+}
+
+.nav_dropdown_support_open{
+  position: absolute;
+  top: 12%;
+  right: 1%;
+  background-color: azure;
+  border-radius: 5px;
+  width: 22vw;
+  animation: slideDown 0.5s ease forwards;
+  z-index: 1;
+  width: 21vw;
+  height: 15vh;
+  padding: 1%;
+}
+
+.nav_dropdown_support_open a{
+  text-decoration: none;
+  color: black;
+  margin: 5%;
+}
+
+.nav_dropdown_support_close{
+  display: none;
+}
+
+
+
+/* _____________________________________________Query Start_____________________________________________ */
+
+@media only screen and (max-width:768px) {
+ 
+ 
+ .navbar_container{
+   height: 8vh;
+   width: 100vw;
+   display: flex;
+   background-color:rgb(188, 243, 243);
+ }
+ 
+ .navbar_left{
+  width: 65%;
+ }
+ .nav_searchbar{
+  height: 4vh;
+  width: 45vw;
+  background-color:rgb(213, 248, 248);
+ }
+ 
+.menu_for_phone{
+  display:contents;
+ 
+}
+
+
+.navbar_right{
+  width: 35%;
+  justify-content: space-evenly;
+}
+
+.nav_logo{
+  height: 70%;
+  width: 9vw;
+  margin-left: 0%;
+}
+
+ 
+.btn_menu{
+  margin-top: 1%;
+  margin-right: 0%;
+  background-color: transparent;
+  border: none;
+ }
+
+ .menu_dropdown_open{
+  height: 26vh;
+  width: 40vw;
+  background-color: rgb(222, 248, 248);
+  position: absolute;
+  top: 9%;
+  right: 2%;
+  z-index: 3;
+  animation: slideDown 0.5s ease forwards;
+  border-radius: 5px;
+ }
+
+ .menu_dropdown_open p{
+  text-align: center;
+ }
+
+ .menu_dropdown_open a{
+  text-decoration: none;
+  color: black;
+  margin: 5%;
+ }
+
+ .menu_icon{
+  height: 5vh;
+  width: 12vw;
+
+ }
+
+ @keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+ .menu_dropdown_close{
+  display: none;
+ }
+
+
+ .btn_acc_nav{
+   display: none;
+  
+ }
+ 
+ 
+ 
+ 
+ .btn_cart_nav{
+   background-color: transparent;
+   height: 7vh;
+   width: 18vw;
+   cursor: pointer;
+   border: none;
+   border-radius: 15px;
+   font-size: 17px;
+   margin-left: 0%;
+  }
+  
+.btn_cart_nav:hover{
+  background-color: transparent;
+  border: none;
+}
+ 
+ .nav_dropdown_cart_open{
+   top: 9%;
+   right: 8%;
+   width: 32vw;
+   background-color: rgb(222, 248, 248);
+ }
+ 
+ 
+ .nav_dropdown_cart_close{
+   display: none;
+ }
+ 
+ 
+ .btn_support_nav{ 
+    display: none;
+ }
+ 
+
+}

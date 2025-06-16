@@ -1,0 +1,48 @@
+.order_main_container{
+    height: max-content;
+    width: 98vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.order_card{
+    height: 55vh;
+    overflow-x: auto;
+    width: 28vw;
+    background-color: rgb(227, 249, 249);
+    border-radius: 10px;
+    padding: 1%;
+    text-align: left;   
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;   
+    margin-bottom: 2%;
+}
+
+.btn_delivered{
+    height: 6vh;
+    width: 11vw;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:668px) {
+
+.order_card{
+    height: 30vh;
+    width: 42vw;
+     
+    margin-bottom: 4%;
+}
+
+.btn_delivered{
+    height: 6vh;
+    width: 40vw;
+    
+    font-size: 15px;
+}
+    
+}

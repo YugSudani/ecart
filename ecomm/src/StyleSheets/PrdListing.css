@@ -1,0 +1,151 @@
+
+.prd_main_container{
+  display: flex;
+  height: 100vh;
+  width: 100w;
+  align-items: center;
+  justify-content: center;
+}
+
+.prd_form_container{
+   height: 75vh;
+   width: 30vw;
+   background-color:azure;
+   box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+}
+
+.prd_form input{
+    border: 2.5px solid  #337bef;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 16px;
+    height: 22px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    width: 100%;
+}
+
+.prd_form_table{
+    height:40vh;
+    width: 30vw;
+    padding: 30px;  
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.btn_add{
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(122, 240, 122);
+  height: 8vh;
+  width: 29vw;
+  font-size: 130%;
+  font-weight:550;
+  color: white;
+  cursor: pointer;
+  margin-left: 1.8%;
+  margin-bottom: 3%;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  
+}
+
+.btn_add:hover{
+  background-color: #5695fa;
+}
+
+
+.btn_delete{
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(244, 154, 9, 0.845);
+  height: 8vh;
+  width: 29vw;
+  font-size: 130%;
+  font-weight:550;
+  color: white;
+  cursor: pointer;
+  margin-left: 1.8%;
+  margin-bottom: 3%;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  
+}
+
+.btn_delete:hover{
+  background-color:rgb(223, 93, 37);
+}
+
+
+@media only screen and (max-width:676px) {
+  
+.prd_form_container{
+   height: 100vh;
+   width: 100vw;
+   background-color:azure;
+   box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+}
+
+.prd_form input{
+    border: 2.5px solid  #337bef;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 16px;
+    height: 10vh;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    width: 100%;
+}
+
+.prd_form_table{
+    height:60vh;
+    width: 100vw;
+    padding: 10px;  
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.btn_add{
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(122, 240, 122);
+  height: 8vh;
+  width: 80vw;
+  font-size: 130%;
+  font-weight:550;
+  color: white;
+  cursor: pointer;
+  margin-left: 10%;
+  margin-bottom: 3%;
+  margin-top: 10%;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  
+}
+
+.btn_add:hover{
+  background-color: #5695fa;
+}
+
+
+.btn_delete{
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(244, 154, 9, 0.845);
+  height: 8vh;
+  width: 80vw;
+  font-size: 130%;
+  font-weight:550;
+  color: white;
+  cursor: pointer;
+  margin-left: 10%;
+  margin-bottom: 3%;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  
+}
+
+.btn_delete:hover{
+  background-color:rgb(223, 93, 37);
+}
+
+
+}

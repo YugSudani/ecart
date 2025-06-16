@@ -1,0 +1,9 @@
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+*.html text
+*.css text
+*.json text
+*.md text
+*.env text

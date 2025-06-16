@@ -1,0 +1,279 @@
+
+.profile_main_container{
+    height: 112vh;
+    width: 80vw;
+    margin-left:6.5%;
+    display: flex;
+}
+
+.profile_1st_container{
+    height: 89vh;
+    width: 26vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 3%;
+}
+
+
+.profile_1_hello_user{
+  border-radius: 4px;
+  background-color: white;
+  height: 13vh;
+  width: 26vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1.5%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+
+}
+
+.profile_2_orders{
+  border-radius: 4px;
+  background-color: white;
+  height: 60vh;
+  width: 26vw;
+  margin: 1.5%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  text-align: center;
+  overflow-y:auto ;
+}
+
+.order_item_table{
+   background-color: rgb(245, 241, 241);
+   border-radius: 20px;
+   margin: 2%;
+}
+
+
+.ord_title_td{
+  width: 12vw;
+  text-align: left;
+  margin-left: 5%;
+}
+
+
+.profile_3_logout{
+  border-radius: 4px;
+  background-color: white;
+  height: 10vh;
+  width: 26vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1.5%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+.profile_3_logout button{
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.profile_2nd_container{
+    height: 119vh;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-left: 1.3%;
+    margin-top: -1.4%;
+}
+
+.profile_2nd_container h3{
+  margin-right:5%;
+  margin-bottom:0%;
+}
+
+.profile_cards{
+  border-radius: 4px;
+  background-color: white;
+  height: 16vh;
+  width: 60vw;
+  margin: 1.5%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;   
+  padding: 3%;
+}
+
+.btn_profile_update{
+  background-color: lightgreen;
+  height: 5vh;
+  width: 6vw;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn_profile_update:hover{
+  background-color: rgb(83, 180, 212);
+  color: white;
+}
+
+.input_profile_update{
+   border: 1.5px solid  beige;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 16px;
+    height: 22px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    width: 40%;
+}
+
+.btn_cancel{
+  background-color: rgb(255, 255, 255)  ;
+  height: 4vh;
+  width: 7vw;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 3px;
+  margin-left: 40%;
+}
+
+.btn_cancel:hover{
+  background-color: rgb(227, 238, 238);
+}
+
+/* ________________________________________________Query start_____________________ */
+
+@media only screen and (max-width:768px) {
+
+  
+.profile_main_container{
+    height: 112vh;
+    width: 100vw;
+    margin-left:0%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.profile_1st_container{
+  height: 62vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 3%;
+}
+
+.profile_1_hello_user{
+  border-radius: 4px;
+  background-color: white;
+  height: 9vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+
+}
+
+.profile_2_orders{
+  border-radius: 4px;
+  background-color: white;
+  height: 50vh;
+  width: 100vw;
+  margin: 0%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  text-align: center;
+  overflow-y:auto ;
+}
+
+.order_item_table{
+   background-color: rgb(245, 241, 241);
+   border-radius: 4px;
+   margin: 0%;
+   width: 99vw;
+}
+
+.ord_title_td{
+  width: 50vw;
+  text-align: lef t;
+  margin-left: 20%;
+}
+
+.profile_3_logout{
+  display: none;
+}
+.profile_3_logout button{
+   display: none;
+}
+
+.profile_2nd_container{
+    height: 130vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.profile_cards{
+  border-radius: 4px;
+  background-color: white;
+  height: 22vh;
+  width: 95vw;
+  margin: 0%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;   
+  padding: 3%;
+}
+
+.btn_profile_update{
+  background-color: lightgreen;
+  height: 5vh;
+  width: 20vw;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  position: relative;
+  left: 30vw;
+  top: 2vh;
+}
+
+.btn_profile_update:hover{
+  background-color: rgb(83, 180, 212);
+  color: white;
+}
+
+.input_profile_update{
+   border: 1.5px solid  beige;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 16px;
+    height: 22px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    width: 50%;
+}
+
+.btn_cancel{
+  background-color: rgb(255, 255, 255)  ;
+  height: 4vh;
+  width: 30vw;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 3px;
+  margin-left: 40%;
+}
+
+.btn_cancel:hover{
+  background-color: rgb(227, 238, 238);
+}
+
+}

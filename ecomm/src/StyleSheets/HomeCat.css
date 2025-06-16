@@ -1,0 +1,139 @@
+
+
+.prd_card_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+.prd_card{
+    border-radius: 5px;
+    height: 40vh;
+    width: 40vw;
+    padding: 1.5%;
+    margin: 1.5%;
+    background-color:rgb(224, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;   
+    display: flex;
+}
+
+.home_Cat_img{
+    height: 30vh;
+    width: 20vw;
+}
+
+.prd_card_left{
+    width:25vw;
+    height: 40vh;
+}
+
+.prd_card_right{
+    padding: 2%;
+    width:25vw;
+    height: 36.5vh;
+}
+
+.prd_card_right h3{
+    margin-left: 10%;
+}
+
+.btn_add_to_cart{
+    height: 5vh;
+    width: 10vw;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10%;
+    color: white;
+}
+.btn_add_to_cart:hover{
+    background-color: skyblue;
+    color: black;
+}
+
+.prd_card_right_top{
+    margin-left: 10%;
+    height: 22vh;
+    
+}
+
+
+
+/* _______________________________________Query start________________________ */
+
+@media only screen and (max-width:768px) {
+    
+.prd_card_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+.prd_card{
+    border-radius: 5px;
+    height: 45vh;
+    width: 100vw;
+    padding: 0%;
+    margin: 0%;
+    margin-bottom: 2%;
+    background-color:rgb(224, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;   
+    display: flex;
+}
+
+.home_Cat_img{
+    height: 30vh;
+    width: 20vw;
+}
+
+.prd_card_left{
+    width:22vw;
+    height: 40vh;
+}
+
+.prd_card_right{
+    padding: 0%;
+    width:20vw;
+    height: 40vh;
+}
+
+.btn_add_to_cart{
+    height: 5vh;
+    width: 35vw;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 0%;
+    color: white;
+}
+.btn_add_to_cart:hover{
+    background-color: skyblue;
+    color: black;
+}
+
+
+.prd_card_right h3{
+    margin-left: -5vw;
+}
+.prd_card_right_top{
+    margin-left: -10%;
+    height: 28vh;
+}
+.prd_card_right_top p{
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+
+}
+
+}

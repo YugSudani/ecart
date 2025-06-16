@@ -1,0 +1,267 @@
+.cart_main_container{
+    width: 99vw;
+    display: flex;
+}
+
+.cart_left_container{
+    height: 85vh;
+    width: 30vw;
+    padding: .5%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;  
+    margin-top: 1%; 
+}
+
+.item_summary_table{
+    width: 28vw;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.td_idx{
+    width: 5vw;
+}
+
+.td_title{
+    width: 15vw;
+}
+
+.item_summary_table td{
+    border: 1px solid;
+}
+
+.btn_checkout{
+    height: 7vh;
+    width:12vw;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10%;
+   color: white;
+   margin-top: 10%;
+   margin-left: 22%;
+}
+.btn_checkout:hover{
+    background-color: skyblue;
+    color: black;
+}
+
+.btn_checkout_at_end{
+    display: none;
+}
+
+.cart_right_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 70vw;
+    height: max-content;
+}
+
+.prd_card_cart{
+    border-radius: 5px;
+    height: 42vh;
+    width: 30vw;
+    padding: 1.5%;
+    margin: 1.5%;
+    background-color:rgb(224, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;   
+    display: flex;
+}
+
+
+.prd_card_left{
+    width:25vw;
+    height: 40vh;
+}
+
+.prd_card_right{
+    padding: 2%;
+    width:25vw;
+    height: 36.5vh;
+}
+
+.btn_remove{
+    height: 5vh;
+    width:7vw;
+    background-color: rgb(151, 208, 227);
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10%;
+    color: white;
+}
+.btn_remove:hover{
+    background-color: skyblue;
+    color: black;
+}
+
+
+.img_empty_cart{
+    height:70vh;
+    width:30vw
+}
+
+
+/* __________________________________________query start____________________________________ */
+
+
+@media only screen and (max-width:768px){
+    
+.cart_main_container{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cart_left_container{
+    height: 50vh;
+    width: 100vw;
+    padding: 0%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;  
+    margin-top: 1%; 
+    overflow-y: auto;
+}
+
+.item_summary_table{
+    width: 100vw;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px;
+    
+}
+
+
+.td_idx{
+    width: 10vw;
+    height: max-content;
+}
+
+.td_title{
+    width: 80vw;
+    height: max-content;
+}
+
+.td_price{
+    width: 10vw;
+    height: max-content;
+}
+
+.item_summary_table td{
+    border: 0px solid;
+}
+
+.btn_checkout{
+    height: 5vh;
+    width:35vw;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+   color: white;
+   margin-top: 10%;
+   margin-bottom: 5%;
+   margin-left: 33%;
+}
+.btn_checkout:hover{
+    background-color: skyblue;
+    color: black;
+}
+
+.btn_checkout_at_end{
+    display:inline;
+    height: 5vh;
+    width:35vw;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 33%;
+}
+.btn_checkout_at_end:hover{
+    background-color: skyblue;
+    color: black;
+}
+
+
+
+.cart_right_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: max-content;
+    margin-top: 2%;
+}
+
+.prd_card_cart{
+    border-radius: 5px;
+    height: 45vh;
+    width: 95vw;
+    padding: 1.5%;
+    margin: 0%;
+    margin-bottom:3%;
+    background-color:rgb(224, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;   
+    display: flex;
+}
+
+
+.prd_card_left{
+    width:65vw;
+    height: 44vh;
+}
+
+.prd_card_left img{
+    height: 25vh;
+    width: 50vw;
+    margin: 5%;
+}
+
+.prd_card_right{
+    padding: 2%;
+    width:40vw;
+    height: 42vh;
+}
+
+.btn_remove{
+    height: 5vh;
+    width:33vw;
+    background-color: rgb(151, 208, 227);
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 2%;
+    color: white;
+}
+.btn_remove:hover{
+    background-color: skyblue;
+    color: black;
+}
+
+.img_empty_cart{
+    height:45vh;
+    width:100vw
+}
+
+
+
+}

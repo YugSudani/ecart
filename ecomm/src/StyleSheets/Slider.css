@@ -1,0 +1,40 @@
+
+.slider_main_container{
+  height: 60vh;
+  width: 100vw;
+}
+
+.slider_img{
+  height: 40vh;
+  width: 100vw;
+  margin-top: 1%;
+}
+
+.slider_next_arrow , .slider_prev_arrow{
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  font-size: 2rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.slider_next_arrow{
+  right: 2%;
+}
+.slider_prev_arrow{
+  left: 2%;
+}
+
+@media only screen and (max-width:768px) {
+  
+  
+.slider_main_container{
+  height: 30vh;
+}
+
+.slider_img{
+  height: 25vh;
+}
+
+}

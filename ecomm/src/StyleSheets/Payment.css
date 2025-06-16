@@ -1,0 +1,122 @@
+.payment_main_div{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;        
+}
+
+.payment_form_div{
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;   
+    text-align: center;
+    height: max-content;
+    width:35vw;
+    border-radius: 5px;
+    background-color:rgb(224, 255, 255);
+}
+
+.payment_form_table{
+    margin-left: 8%;
+    background-color: rgb(191, 239, 239);
+    width: 29.7vw;
+    border-radius: 10px;
+    box-shadow: rgb(102, 101, 114,0.5) 0px 5px 15px;  
+    height:40vh;
+}
+
+.QRimg{
+    height: 20vh;
+    width: 12vw;
+}
+
+.payment_select_tag{
+    height: 5vh;
+    background-color: transparent;
+    border: 2px solid skyblue;
+    border-radius: 5px;
+}
+
+.payment_addres_main_container{
+    background-color: rgb(224, 255, 255);
+    border-radius: 5px;
+    height: 53vh;
+    width: 35vw;
+    text-align: center;
+    margin-left: 1%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;   
+}
+
+.address_form{
+    margin-left: 7%;
+    height: 39vh;
+    width: 30vw;
+    border-radius: 10px;
+    background-color: rgb(191, 239, 239);
+    box-shadow: rgba(102, 101, 114, 0.5) 0px 5px 15px;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.address_table{
+    height: 30vh;
+    width: 25vw;
+    text-align: left;
+}
+
+.payment_in_txt{
+    height: 3vh;
+    background-color: transparent;
+    border: 2px solid skyblue;
+    border-radius: 5px;
+    font-size: 15px;   
+}
+
+
+@media only screen and (max-width:676px) {
+    
+.payment_main_div{
+    height: 100vh;
+    width: 100vw;          
+}
+
+.payment_form_div{
+    height: 80vw;
+    width:100vw;
+}
+
+.payment_form_table{
+  
+    margin-left: 0%;
+    width: 100vw;
+    height:30vh;
+}
+
+.QRimg{
+    height: 20vh;
+    width: 45vw;
+}
+
+.payment_select_tag{
+    height: 5vh;
+   
+}
+
+.payment_addres_main_container{
+    height: 50vh;
+    width: 100vw;
+    margin-left: 0%;
+}
+
+.address_form{
+    margin-left: 0%;
+    width: 100vw;
+}
+
+.address_table{
+   width:90vw;
+}
+
+}
