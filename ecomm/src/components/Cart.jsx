@@ -18,7 +18,7 @@ const Cart=()=>{
     
     const get_user_cart_products=async()=>{
 
-        const response = await fetch("http://localhost:3000/surfing/getprdbyuser" ,{
+        const response = await fetch("https://ecart-backend-dczo.onrender.com/surfing/getprdbyuser" ,{
             method:"get",
         });
 
@@ -49,7 +49,7 @@ const genContext = useGenContext();  //declared alredy
 
         const query = IDs.join(","); 
         // console.log("IDs: "+IDs);
-        const response = await fetch(`http://localhost:3000/product/getprdbyprdid?idData=${query}`, {
+        const response = await fetch(`https://ecart-backend-dczo.onrender.com/product/getprdbyprdid?idData=${query}`, {
             method:"GET"
         });
 
@@ -68,7 +68,7 @@ const genContext = useGenContext();  //declared alredy
       
       
                 const UpdateGenCtxt=async()=>{                 // function that gets user details and set context ct
-                    const details = await fetch("http://localhost:3000/surfing/userinfo" , {
+                    const details = await fetch("https://ecart-backend-dczo.onrender.com/surfing/userinfo" , {
                     method:"GET"
                 });
                 
@@ -96,7 +96,7 @@ const genContext = useGenContext();  //declared alredy
 
     const Handle_remove_from_cart=async(prdId)=>{
 
-        const response = await fetch(`http://localhost:3000/surfing/removefromcart?prdid=${prdId}` , {
+        const response = await fetch(`https://ecart-backend-dczo.onrender.com/surfing/removefromcart?prdid=${prdId}` , {
             method:"POST",
             headers:
                      {"Content-Type": "application/json"},
