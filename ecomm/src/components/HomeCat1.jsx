@@ -33,7 +33,7 @@ const HomeCat1=()=>{
     
     useEffect(()=>{
         GetProductByCat();
-    },[])
+    })
     
     //_________________________ UPDATE UI _____________________________________
     
@@ -60,7 +60,7 @@ const HomeCat1=()=>{
 
     useEffect(()=>{
         UpdateGenCtxt(); // For onLoad update 
-    },[]);
+    });
 
     //____________________________________________________________
 
