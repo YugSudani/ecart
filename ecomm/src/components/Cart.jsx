@@ -24,7 +24,7 @@ const Cart=()=>{
 
         const productIds = await response.json();
         if(productIds.result === "succese"){
-            console.log(productIds.user_cart_prd_ids); // use this prd ids to find product in prdmodel(dont use state)
+           // console.log(productIds.user_cart_prd_ids); // use this prd ids to find product in prdmodel(dont use state)
             if(productIds.user_cart_prd_ids.length <1){
                 setCartIsEmpty(true);
             }else{
@@ -38,7 +38,7 @@ const Cart=()=>{
 
     useEffect(()=>{
         get_user_cart_products();
-    },[])
+    })
 
 //above taking ids from user accound
 //below taking products with that ids into cart
@@ -87,7 +87,7 @@ const genContext = useGenContext();  //declared alredy
 
     useEffect(()=>{
         UpdateGenCtxt(); // For onLoad update 
-    },[]);
+    });
 
     //____________________________________________________________
 
@@ -107,7 +107,6 @@ const genContext = useGenContext();  //declared alredy
 
         if(answer.result === "succese"){
             await UpdateGenCtxt();
-            window.location.reload();
         }else{
             wrong();
         }
@@ -123,7 +122,7 @@ const Total=(()=>{
 
    useEffect(()=>{
         Total(); // For onLoad update 
-    },[genContext.prds]);
+    });
 
 
 
@@ -185,7 +184,7 @@ const Total=(()=>{
 
 
             <div className="cart_right_container">
-                {cartIsEmpty? <h2><img className="img_empty_cart" src={emptyCart} alt="Cart is Empty" /> <hr /> <h3 style={{marginLeft:"19%"}}>Your Cart Is Empty</h3></h2> : null }
+                {cartIsEmpty? <h2><img className="img_empty_cart" src={emptyCart} alt="Cart is Empty" /> <hr /> <b style={{marginLeft:"19%"}}>Your Cart Is Empty</b></h2> : null }
                   {genContext.prds? genContext.prds.map((p) =>{
                      return (
                                 <div className="prd_card_cart" key={p.prdid}>
