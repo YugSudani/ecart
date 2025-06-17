@@ -1,7 +1,4 @@
-import React , { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-
 import Navbar from "./Navbar";
 import Home_slider from "./Home_slider";
 import menfashion from "../IMGS/menfashion.jpg"
