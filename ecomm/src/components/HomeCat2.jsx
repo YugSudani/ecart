@@ -33,7 +33,7 @@ const HomeCat2=()=>{
     
     useEffect(()=>{
         GetProductByCat();
-    },[])
+    })
     
 
         //_________________________ UPDATE UI _____________________________________
@@ -61,7 +61,7 @@ const HomeCat2=()=>{
     
         useEffect(()=>{
             UpdateGenCtxt(); // For onLoad update 
-        },[]);
+        });
     
    
     async function Handle_add_to_cart(prd_id){
