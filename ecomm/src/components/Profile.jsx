@@ -34,7 +34,7 @@ const Profile=()=>{
     }
      useEffect(()=>{
         GetUserDetails();
-    },[])
+    })
 
         // Logout feature
         const logout=()=>{
@@ -131,37 +131,6 @@ const Profile=()=>{
         },[userDetils])
         
         
-
-
-
-        //-----------------------------------remove this-----------------------------------------------------
-        // gete product details using that user order prdids 
-        const[products,setProducts]=useState();
-        const get_products_by_IDs=async(IDs)=>{
-
-        const query = IDs.join(","); 
-        // console.log("IDs: "+IDs);
-        const response = await fetch(`https://ecart-backend-dczo.onrender.com/product/getprdbyprdid?idData=${query}`, {
-            method:"GET"
-        });
-
-        const cartProducts = await response.json();
-        if(cartProducts.result === "succese"){
-                setProducts(cartProducts.products);
-        }else {
-                alert("No product found")
-        }   
-    }
-    //-----------------------------------=------------------------------------------------------------------
-
-
-    useEffect(()=>{
-        const prdIDs = prds.map((p)=>{
-            return p.prds
-        });
-        get_products_by_IDs(prdIDs);
-    },[prds])
-
    
     //cancel Order
     const cancel_order=async(prdid)=>{
@@ -236,7 +205,7 @@ const Profile=()=>{
 
                                                     {/* {console.log(p)} */}
                                                     <td style={{width:"3vw"}}>{p.total}/-</td>
-                                                    <td style={{width:"5vw"}}>{p.Status == "delivered"? <b style={{color:"green"}}>Delivered</b>: <>{ p.Status == "cancelled"? <b style={{color:"red"}}>Cancelled</b> : <b style={{color:"orange"}}>Delivered Soon</b>  }</>} </td>
+                                                    <td style={{width:"5vw"}}>{p.Status === "delivered"? <b style={{color:"green"}}>Delivered</b>: <>{ p.Status === "cancelled"? <b style={{color:"red"}}>Cancelled</b> : <b style={{color:"orange"}}>Delivered Soon</b>  }</>} </td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
