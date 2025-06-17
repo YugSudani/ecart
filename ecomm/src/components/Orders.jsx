@@ -31,7 +31,7 @@ const Orders=()=>{
     
     useEffect(()=>{
         get_existing_orders();
-    },[]);
+    });
     
     useEffect(()=>{
         console.log(orders);
