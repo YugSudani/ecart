@@ -3,7 +3,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import ecomLOGO from "../IMGS/ecomLOGO.jpg"
 import hs1IMG from "../IMGS/hs1IMG.jpg"
 import hs2IMG from "../IMGS/hs2IMG.jpg"
 import hs3IMG from "../IMGS/hs3IMG.jpg"
