@@ -20,7 +20,17 @@ const { isAdmin } = require("./middelware/isAdmin");
 connectMDB("mongodb+srv://yugsudani88:Vl7CXGJuTtYisJp4@clusterecartdb.fwuvdoa.mongodb.net/?retryWrites=true&w=majority&appName=ClusterEcartDB");
 
 // Enabling frontend backend communications
-app.use(cors()); // allows all origins
+//app.use(cors()); // allows all origins
+app.use(cors({
+    origin: 'https://ecart-vjnr.onrender.com',
+    credentials: true
+}));
+
+app.options('*', cors({
+    origin: 'https://ecart-vjnr.onrender.com',
+    credentials: true
+}));
+
 app.use(express.json());
 app.use(cookieParser());
 
