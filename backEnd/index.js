@@ -19,15 +19,17 @@ const { isAdmin } = require("./middelware/isAdmin");
 //connection
 connectMDB(process.env.mongoURL);
 
+const aOrg = process.env.allowedOrigin;
+
 // Enabling frontend backend communications
 //app.use(cors()); // allows all origins
 app.use(cors({
-    origin: allowedOrigin,
+    origin: aOrg,
     credentials: true
 }));
 
 app.options('*', cors({
-    origin: allowedOrigin,
+    origin: aOrg,
     credentials: true
 }));
 
