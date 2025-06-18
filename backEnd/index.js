@@ -17,7 +17,7 @@ const { isLogin } = require("./middelware/isLogin");
 const { isAdmin } = require("./middelware/isAdmin");
 
 //connection
-connectMDB("mongodb+srv://yugsudani88:Vl7CXGJuTtYisJp4@clusterecartdb.fwuvdoa.mongodb.net/?retryWrites=true&w=majority&appName=ClusterEcartDB");
+connectMDB("mongodb+srv://yugsudani88:Vl7CXGJuTtYisJp4@clusterecartdb.fwuvdoa.mongodb.net/?retryWrites=true&w=majority&appName=ClusterEcartDB&tls=true&tlsAllowInvalidCertificates=true");
 
 
 // Enabling frontend backend communications
