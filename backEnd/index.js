@@ -28,10 +28,10 @@ app.use(cors({
     credentials: true
 }));
 
-app.options('*', cors({
-    origin: aOrg,
-    credentials: true
-}));
+// app.options('*', cors({
+//     origin: aOrg,
+//     credentials: true
+// }));
 
 app.use(express.json());
 app.use(cookieParser());
