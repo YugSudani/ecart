@@ -27,7 +27,7 @@ app.use(cors({
 }));
 
 app.options('*', cors({
-    origin: 'allowedOrigin,
+    origin: allowedOrigin,
     credentials: true
 }));
 
