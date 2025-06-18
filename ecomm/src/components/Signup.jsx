@@ -27,7 +27,7 @@ const Signup =()=>{
     const HandelSubmit=async(e)=>{
         e.preventDefault();
 
-        const response = await fetch("https://ecart-backend-dczo.onrender.com/signup" , {
+        const response = await fetch("https://ecart-backend-f393.onrender.com/signup" , {
             method: "POST",
              headers: {
                 "Content-Type": "application/json"
