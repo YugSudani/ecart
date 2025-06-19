@@ -20,7 +20,8 @@ const Profile=()=>{
     const[userDetils,setUserDetails] = useState({});
     const GetUserDetails=async()=>{
         const details = await fetch(`${apiUrl}/surfing/userinfo` , {
-            method:"GET"
+            method:"GET",
+            credentials: 'include'
         });
         const datas = await details.json();
        // console.log("Data : "+datas);
@@ -61,6 +62,7 @@ const Profile=()=>{
             
             const response = await fetch(`${apiUrl}/surfing/updateEmail` ,{
                 method:"POST",
+                credentials: 'include',
                   headers: {
                         "Content-Type": "application/json"
                   },
@@ -94,6 +96,7 @@ const Profile=()=>{
             
             const response = await fetch(`${apiUrl}/surfing/updatepwd` , {
                 method:"POST",
+                credentials: 'include',
                 headers:{
                      "Content-Type": "application/json"
                 },
@@ -118,7 +121,8 @@ const Profile=()=>{
         const get_orders=async()=>{
             
             const response = await fetch(`${apiUrl}/surfing/myorders`,{
-                method:"GET"
+                method:"GET",
+                credentials: 'include'
             });
             
             const res = await response.json();
@@ -137,6 +141,7 @@ const Profile=()=>{
     const cancel_order=async(prdid)=>{
         const response = await fetch(`${apiUrl}/surfing/cancelorder`,{
             method:"POST",
+            credentials: 'include',
             headers:{
                 "Content-Type":"application/json" 
             },
