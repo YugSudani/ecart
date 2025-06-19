@@ -30,8 +30,13 @@ router.post("/login" , async (req,res)=>{
         // generate UID only if user Found in DB
         const UID = uuidv4();
         if(user){
-            console.log("UID Generated : "+UID); 
-            res.cookie('UID',UID);          // set UID in cookies 
+           // console.log("UID Generated : "+UID); 
+            res.cookie('UID',UID , 
+                         {
+                          httpOnly: true,
+                          secure: true,  // if deployed over https
+                          sameSite: 'None'
+                         });          // set UID in cookies 
             res.json({result:"succese"});
         }else{
             res.json({result:"fail"});
