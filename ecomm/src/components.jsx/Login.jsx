@@ -19,10 +19,12 @@ const Login=()=>{
         setFormData({...formData, [e.target.name]:e.target.value});
     }
 
+    const apiUrl=process.env.REACT_APP_API_URL;
+    
     const HandleSubmit=async(e)=>{
         e.preventDefault();
 
-        const response = await fetch("https://ecart-backend-f393.onrender.com/login" ,{
+        const response = await fetch(`${apiUrl}/login` ,{
             method:"POST",
             headers:{
                     "Content-Type": "application/json"
