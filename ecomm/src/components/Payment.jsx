@@ -95,6 +95,7 @@ const Payment=()=>{
 
             const response = await fetch(`${apiUrl}/surfing/del_multiple_from_cart` , {
                 method:"POST",
+                credentials: 'include',
                 headers:
                         {"Content-Type": "application/json"},
                     
@@ -117,6 +118,7 @@ const Payment=()=>{
         console.log(order);
             const response = await fetch(`${apiUrl}/surfing/placedorder` ,{
                     method:"POST",
+                    credentials: 'include',
                     headers: {
                         "Content-Type": "application/json"
                     },
