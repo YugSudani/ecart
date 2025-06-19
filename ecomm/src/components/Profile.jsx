@@ -12,13 +12,14 @@ const Profile=()=>{
         const logoutDone=()=> toast.error("Logout Succesefull");
         const updated=()=> toast.success("Info Updated Seccessfuly")
 
+    const apiUrl = process.env.REACT_APP_API_URL;
     
     const navigate = useNavigate()
     
     //gets user Info from database
     const[userDetils,setUserDetails] = useState({});
     const GetUserDetails=async()=>{
-        const details = await fetch("https://ecart-backend-dczo.onrender.com/surfing/userinfo" , {
+        const details = await fetch(`${apiUrl}/surfing/userinfo` , {
             method:"GET"
         });
         const datas = await details.json();
@@ -58,7 +59,7 @@ const Profile=()=>{
         const updateEmail=async(e)=>{
             e.preventDefault();
             
-            const response = await fetch("https://ecart-backend-dczo.onrender.com/surfing/updateEmail" ,{
+            const response = await fetch(`${apiUrl}/surfing/updateEmail` ,{
                 method:"POST",
                   headers: {
                         "Content-Type": "application/json"
@@ -91,7 +92,7 @@ const Profile=()=>{
         const updatePassword=async(e)=>{
             e.preventDefault();
             
-            const response = await fetch("https://ecart-backend-dczo.onrender.com/surfing/updatepwd" , {
+            const response = await fetch(`${apiUrl}/surfing/updatepwd` , {
                 method:"POST",
                 headers:{
                      "Content-Type": "application/json"
@@ -116,7 +117,7 @@ const Profile=()=>{
         const[prds,setPrds]=useState([]);
         const get_orders=async()=>{
             
-            const response = await fetch("https://ecart-backend-dczo.onrender.com/surfing/myorders",{
+            const response = await fetch(`${apiUrl}/surfing/myorders`,{
                 method:"GET"
             });
             
@@ -134,7 +135,7 @@ const Profile=()=>{
    
     //cancel Order
     const cancel_order=async(prdid)=>{
-        const response = await fetch("https://ecart-backend-dczo.onrender.com/surfing/cancelorder",{
+        const response = await fetch(`${apiUrl}/surfing/cancelorder`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json" 
