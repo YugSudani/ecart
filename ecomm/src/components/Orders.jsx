@@ -17,7 +17,8 @@ const Orders=()=>{
     const get_existing_orders=async()=>{
 
         const response = await fetch(`${apiUrl}/admin/ordersOfUser`,{
-            method:"GET"
+            method:"GET",
+            credentials: 'include'
         });
 
         const res = await response.json();
@@ -43,6 +44,7 @@ const Orders=()=>{
         
         const response = await fetch(`${apiUrl}/admin/mark_as_delivered`,{
             method:"POST",
+            credentials: 'include',
             headers:
             {"Content-Type": "application/json"},
             
