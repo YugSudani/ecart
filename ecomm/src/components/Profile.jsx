@@ -151,9 +151,6 @@ const Profile=()=>{
         const res = await response.json();
         if(res.result === "succese"){
             orderC();
-            setTimeout(() => {
-                window.location.reload();
-            }, 2000);
         }else{
             wrong();
         }
