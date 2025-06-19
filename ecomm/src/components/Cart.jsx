@@ -20,6 +20,7 @@ const Cart=()=>{
 
         const response = await fetch(`${apiUrl}/surfing/getprdbyuser` ,{
             method:"get",
+            credentials: 'include'
         });
 
         const productIds = await response.json();
@@ -50,7 +51,8 @@ const genContext = useGenContext();  //declared alredy
         const query = IDs.join(","); 
         // console.log("IDs: "+IDs);
         const response = await fetch(`${apiUrl}/product/getprdbyprdid?idData=${query}`, {
-            method:"GET"
+            method:"GET",
+            credentials: 'include'
         });
 
         const cartProducts = await response.json();
@@ -69,7 +71,8 @@ const genContext = useGenContext();  //declared alredy
       
                 const UpdateGenCtxt=async()=>{                 // function that gets user details and set context ct
                     const details = await fetch(`${apiUrl}/surfing/userinfo` , {
-                    method:"GET"
+                    method:"GET",
+                    credentials: 'include'
                 });
                 
                     const datas = await details.json();
@@ -98,6 +101,7 @@ const genContext = useGenContext();  //declared alredy
 
         const response = await fetch(`${apiUrl}/surfing/removefromcart?prdid=${prdId}` , {
             method:"POST",
+            credentials: 'include',
             headers:
                      {"Content-Type": "application/json"},
         });
