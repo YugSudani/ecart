@@ -77,7 +77,7 @@ const Navbar =()=>{
     const[login,setLogin]=useState(false);
     const apiUrl = process.env.REACT_APP_API_URL;
     useEffect(()=>{
-        fetch(`${apiUrl}/userinfo` , {
+        fetch(`${apiUrl}/surfing/userinfo` , {
             credentials:'include'
         })
         .then(res=>res.json())
