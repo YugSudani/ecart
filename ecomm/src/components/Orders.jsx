@@ -12,10 +12,11 @@ const Orders=()=>{
 
     const[orders,serOrders]=useState();
 
+    const apiUrl = process.env.REACT_APP_API_URL;
+    
     const get_existing_orders=async()=>{
 
-
-        const response = await fetch("https://ecart-backend-dczo.onrender.com/admin/ordersOfUser",{
+        const response = await fetch(`${apiUrl}/admin/ordersOfUser`,{
             method:"GET"
         });
 
@@ -40,7 +41,7 @@ const Orders=()=>{
     
     const mark_as_deliverd=async(order_id)=>{
         
-        const response = await fetch("https://ecart-backend-dczo.onrender.com/admin/mark_as_delivered",{
+        const response = await fetch(`${apiUrl}/admin/mark_as_delivered`,{
             method:"POST",
             headers:
             {"Content-Type": "application/json"},
