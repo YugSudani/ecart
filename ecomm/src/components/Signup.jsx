@@ -23,11 +23,12 @@ const Signup =()=>{
         setFormData({...formData , [e.target.name]:e.target.value})
     }
 
+    const apiUrl=process.env.REACT_APP_API_URL;
     // sending[POST] Signup cradantial to BackEnd & getting response
     const HandelSubmit=async(e)=>{
         e.preventDefault();
 
-        const response = await fetch("https://ecart-backend-f393.onrender.com/signup" , {
+        const response = await fetch(`${apiUrl}/signup` , {
             method: "POST",
              headers: {
                 "Content-Type": "application/json"
