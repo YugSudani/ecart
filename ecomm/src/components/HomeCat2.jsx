@@ -13,11 +13,12 @@ const HomeCat2=()=>{
     const navigate = useNavigate();
 
     const[prds,setPrds]= useState();
-    
+
+    const apiUrl = process.env.REACT_APP_API_URL;
     
     const GetProductByCat=async()=>{
 
-        const products = await fetch("https://ecart-backend-dczo.onrender.com/product/getprdbycategory?category=jewelery",{
+        const products = await fetch(`${apiUrl}/product/getprdbycategory?category=jewelery`,{
             method:"GET",
         });
 
@@ -42,7 +43,7 @@ const HomeCat2=()=>{
           
           
                     const UpdateGenCtxt=async()=>{                 // function that gets user details and set context ct
-                        const details = await fetch("https://ecart-backend-dczo.onrender.com/surfing/userinfo" , {
+                        const details = await fetch(`${apiUrl}/surfing/userinfo` , {
                         method:"GET"
                     });
                     
@@ -68,7 +69,7 @@ const HomeCat2=()=>{
         
         const prdid = prd_id
 
-        const response = await fetch("https://ecart-backend-dczo.onrender.com/add_to_cart" ,{
+        const response = await fetch(`${apiUrl}/add_to_cart` ,{
             method:"POST",
             headers:{
                  "Content-Type": "application/json"
