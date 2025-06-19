@@ -26,6 +26,7 @@ const Login=()=>{
 
         const response = await fetch(`${apiUrl}/login` ,{
             method:"POST",
+            credentials: 'include',
             headers:{
                     "Content-Type": "application/json"
             },
