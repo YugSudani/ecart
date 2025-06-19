@@ -82,7 +82,7 @@ const Navbar =()=>{
         })
         .then(res=>res.json())
         .then(data=>{
-            if(data.error){
+            if(data.result === "fail"){
                 setLogin(false);
             }else{
                 setLogin(true);
