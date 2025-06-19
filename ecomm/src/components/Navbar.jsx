@@ -70,9 +70,25 @@ const Navbar =()=>{
 
     //updating cart count
 
+    
+    //checking if Login 
     const genContext = useGenContext();
 
-
+    const[login,setLogin]=useState(false);
+    const apiUrl = process.env.REACT_APP_API_URL;
+    useEffect(()=>{
+        fetch(`${apiUrl}/userinfo` , {
+            credentials:'include'
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.error){
+                setLogin(false);
+            }else{
+                setLogin(true);
+            }
+        });
+    },[]);
 
 //__________________________________________________________________________________
     return(
@@ -93,7 +109,7 @@ const Navbar =()=>{
                                 <button onMouseEnter={()=>{toggleAccOpen()}}  className="btn_acc_nav">👤 Account</button>
                                 <div onMouseLeave={()=>{toggleAccOpen()}} className={accOpen? "nav_dropdown_account_open" : "nav_dropdown_account_close"}>
                                             <NavLink to={"/Profile"}>‎ ‎👤 My Profile</NavLink><hr />
-                                            {document.cookie.length<1 ? <>  <div style={{cursor:"pointer", marginLeft:"8px"}} onClick={()=>{navigate("/login")}}>‎‎ 🔐 : Login</div> </>:
+                                            {login ? <>  <div style={{cursor:"pointer", marginLeft:"8px"}} onClick={()=>{navigate("/login")}}>‎‎ 🔐 : Login</div> </>:
                                             <><div style={{cursor:"pointer", marginLeft:"8px"}} onClick={()=>{logout()}}>【⏻】 Logout</div></>}
                                 </div>
                             </div>
