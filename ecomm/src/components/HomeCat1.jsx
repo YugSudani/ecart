@@ -20,6 +20,7 @@ const HomeCat1=()=>{
 
         const products = await fetch(`${apiUrl}/product/getprdbycategory?category=menclothing`,{
             method:"GET",
+            credentials: 'include'
         });
 
         const prdS = await products.json();
@@ -43,7 +44,8 @@ const HomeCat1=()=>{
       
                 const UpdateGenCtxt=async()=>{                 // function that gets user details and set context ct
                     const details = await fetch(`${apiUrl}/surfing/userinfo` , {
-                    method:"GET"
+                    method:"GET",
+                    credentials: 'include'
                 });
                 
                     const datas = await details.json();
@@ -72,6 +74,7 @@ const HomeCat1=()=>{
                                                                             // it sets new prdid into user's cartprdid
             const response = await fetch(`${apiUrl}/add_to_cart` ,{
                                 method:"POST",
+                                credentials: 'include',
                                 headers:{
                                 "Content-Type": "application/json"
                                 },
