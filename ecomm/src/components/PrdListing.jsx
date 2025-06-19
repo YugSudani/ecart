@@ -36,6 +36,7 @@ const PrdListing=()=>{
     
             const response = await fetch(`${apiUrl}/admin/setPrd` , {
                 method: "POST",
+                credentials: 'include',
                 headers: { "Content-Type": "application/json"
                    
                 },
@@ -59,7 +60,8 @@ const PrdListing=()=>{
 
             const prdID = formData.prdid;
             const response = await fetch(`${apiUrl}/admin/delprd?prdid=${prdID}` , {
-                method:"GET"
+                method:"GET",
+                credentials: 'include'
             });
 
             const res = await response?.json();
