@@ -88,11 +88,12 @@ const Payment=()=>{
         dont();
     },[])
 
+    const apiUrl = process.env.REACT_APP_API_URL;
 
     const removed_placed_order_item_from_cart=async()=>{ 
 
 
-            const response = await fetch("https://ecart-backend-dczo.onrender.com/surfing/del_multiple_from_cart" , {
+            const response = await fetch(`${apiUrl}/surfing/del_multiple_from_cart` , {
                 method:"POST",
                 headers:
                         {"Content-Type": "application/json"},
@@ -114,7 +115,7 @@ const Payment=()=>{
         e.preventDefault();
 
         console.log(order);
-            const response = await fetch("https://ecart-backend-dczo.onrender.com/surfing/placedorder" ,{
+            const response = await fetch(`${apiUrl}/surfing/placedorder` ,{
                     method:"POST",
                     headers: {
                         "Content-Type": "application/json"
