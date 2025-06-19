@@ -20,6 +20,7 @@ const HomeCat2=()=>{
 
         const products = await fetch(`${apiUrl}/product/getprdbycategory?category=jewelery`,{
             method:"GET",
+            credentials: 'include'
         });
 
         const prdS = await products.json();
@@ -44,7 +45,8 @@ const HomeCat2=()=>{
           
                     const UpdateGenCtxt=async()=>{                 // function that gets user details and set context ct
                         const details = await fetch(`${apiUrl}/surfing/userinfo` , {
-                        method:"GET"
+                        method:"GET",
+                        credentials: 'include'
                     });
                     
                         const datas = await details.json();
@@ -71,6 +73,7 @@ const HomeCat2=()=>{
 
         const response = await fetch(`${apiUrl}/add_to_cart` ,{
             method:"POST",
+            credentials: 'include',
             headers:{
                  "Content-Type": "application/json"
             },
