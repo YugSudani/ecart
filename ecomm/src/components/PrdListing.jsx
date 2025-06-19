@@ -11,7 +11,8 @@ const PrdListing=()=>{
     const done=()=> toast.success("Product Listed Seccessfuly _ _ _")
     const deleted=()=> toast.success("Product Deleted Seccessfuly _ _ _")
 
-
+    const apiUrl = process.env.REACT_APP_API_URL;
+    
         // State for managing form data
         const[formData,setFormData] = useState({
             prdid:"",
@@ -33,7 +34,7 @@ const PrdListing=()=>{
         const HandelSubmit=async(e)=>{
             e.preventDefault();
     
-            const response = await fetch("https://ecart-backend-dczo.onrender.com/admin/setPrd" , {
+            const response = await fetch(`${apiUrl}/admin/setPrd` , {
                 method: "POST",
                 headers: { "Content-Type": "application/json"
                    
@@ -57,7 +58,7 @@ const PrdListing=()=>{
         const handle_delete=async()=>{ 
 
             const prdID = formData.prdid;
-            const response = await fetch(`https://ecart-backend-dczo.onrender.com/admin/delprd?prdid=${prdID}` , {
+            const response = await fetch(`${apiUrl}/admin/delprd?prdid=${prdID}` , {
                 method:"GET"
             });
 
