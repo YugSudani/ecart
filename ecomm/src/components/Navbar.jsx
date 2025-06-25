@@ -80,12 +80,13 @@ const Navbar =()=>{
         fetch(`${apiUrl}/surfing/userinfo` , {
             credentials:'include'
         })
-        .then(res=>res.json())
-        .then(data=>{
-            if(data.result === "fail"){
+         .then((res)=>{
+            if(res.status === 200){
+                setLogin(true);
+            }else if(res.status === 401){
                 setLogin(false);
             }else{
-                setLogin(true);
+                setLogin(false);
             }
         });
     });
