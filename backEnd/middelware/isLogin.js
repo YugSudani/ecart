@@ -11,7 +11,7 @@ async function isLogin(req,res,next)
    // console.log("Map UID : "+UIDuserMap)
     if(!UIDuserMap){
         console.log("Access Denied by isLogin middleware")
-        res.json({ error: "Access Denied Login To Proceed _ _ _" }); 
+        res.status(401).json({ error: "Access Denied Login To Proceed _ _ _" }); 
     }else{
         next();
     }
