@@ -110,8 +110,9 @@ const Navbar =()=>{
                                 <button onMouseEnter={()=>{toggleAccOpen()}}  className="btn_acc_nav">👤 Account</button>
                                 <div onMouseLeave={()=>{toggleAccOpen()}} className={accOpen? "nav_dropdown_account_open" : "nav_dropdown_account_close"}>
                                             <NavLink to={"/Profile"}>‎ ‎👤 My Profile</NavLink><hr />
-                                            {login ? <>  <div style={{cursor:"pointer", marginLeft:"8px"}} onClick={()=>{navigate("/login")}}>‎‎ 🔐 : Login</div> </>:
-                                            <><div style={{cursor:"pointer", marginLeft:"8px"}} onClick={()=>{logout()}}>【⏻】 Logout</div></>}
+                                            {login ? <><div style={{cursor:"pointer", marginLeft:"8px"}} onClick={()=>{logout()}}>【⏻】 Logout</div></>  :
+                                              <> <div style={{cursor:"pointer", marginLeft:"8px"}} onClick={()=>{navigate("/login")}}>‎‎ 🔐 : Login</div> </>
+                                            }
                                 </div>
                             </div>
 
