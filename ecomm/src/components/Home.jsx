@@ -28,7 +28,7 @@ const Home =()=>{
                         </div>
 
                         <div className="home_cat_container">
-                                <NavLink className={"home_cat_link"} to={"/HomeCat1"}>
+                                <NavLink className={"home_cat_link"} to={"/HomeCat2"}>
                                     <img className="home_cat_img_women" src={womenclothing} alt="" />
                                 <br />Women's Wear</NavLink> <br />                       
                         </div>
