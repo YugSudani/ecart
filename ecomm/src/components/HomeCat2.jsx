@@ -111,7 +111,7 @@ const HomeCat2=()=>{
                                         <div className="prd_card_right_top">
                                             <p><b>Product Description : </b>{p.description}</p>
                                         </div>
-                                        <h3>Price : {p.price}/- Rs.</h3>
+                                        <h3>Price : {p.price}/-Rs.</h3>
                                         <button onClick={()=>{Handle_add_to_cart(p.prdid)}} className="btn_add_to_cart">Add To Cart</button>
                                     </div>
                                 </div>
