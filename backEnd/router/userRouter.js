@@ -82,7 +82,7 @@ router.post("/add_to_cart" , async(req,res)=>{
 
 
 router.get("/pingTEST",async(req,res)=>{
-    res.status(500).send('ok')
+    res.status(200).send('ok')
 })
 
 
