@@ -81,6 +81,17 @@ router.post("/add_to_cart" , async(req,res)=>{
 });
 
 
+router.get('/logout', async (req,res)=>{
+    res.clearCookie('UID', {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'None',
+    path: '/', // critical!
+  });
+  console.log("Logout done");
+  res.status(200).send('Logged out');
+})
+
 router.get("/pingTEST",async(req,res)=>{
     res.status(200).send('ok')
 })
