@@ -49,11 +49,17 @@ const Navbar =()=>{
         }
     }
 
-    const logout=()=>{
-        Cookies.remove("UID", { path: '/' });
+   const logout=async()=>{
+    const apiUrl=process.env.REACT_APP_API_URL;
+
+        await fetch(`${apiUrl}/logout`,{
+            method:"get",
+            credentials: 'include',
+        });
         setAccOpen(false);
         setShowMenu(false)
         succes();
+       // alert("deleted")
     }
 
 
