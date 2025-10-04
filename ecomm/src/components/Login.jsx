@@ -20,10 +20,11 @@ const Login=()=>{
     }
 
     const apiUrl=process.env.REACT_APP_API_URL;
+    const [isLoading,setIsLoading] = useState(false);
     
     const HandleSubmit=async(e)=>{
         e.preventDefault();
-
+        setIsLoading(true);
         const response = await fetch(`${apiUrl}/login` ,{
             method:"POST",
             credentials: 'include',
@@ -36,11 +37,13 @@ const Login=()=>{
         const data = await response.json();
         // console.log(data);
 
-        if(data.result === "succese"){            
+        if(data.result === "succese"){   
+            setIsLoading(false);
             navigate("/");
         }else{
             // alert("Something Went wrong _ _ _");
             invalid();
+            setIsLoading(false);
         }
     }
 
@@ -74,6 +77,7 @@ const Login=()=>{
                                 </tr>
                             </tbody>
                         </table>
+                                { isLoading?<><span class="loader"></span><p style={{'textAlign':'center'}}>Processing please Wait</p></>:""}
                                     <button className="btn_login" type="submit">Login</button>
                                     <br />
                                     <button className="btn_login_signup" onClick={()=>{navigate("/signup")}} type="submit">New here? Signup Now !</button>
