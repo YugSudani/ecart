@@ -123,6 +123,33 @@ html,body{
 }
 
 
+/* Loader */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #097fe7;
+    border-bottom-color: rgba(140, 139, 135, 0.45);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin-left:45.3%;
+    }
+
+  @media only screen and (max-width:600px) {
+    .loader{
+      margin-left:41%;
+    }
+  }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
 
 
 
