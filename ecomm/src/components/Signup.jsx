@@ -24,10 +24,11 @@ const Signup =()=>{
     }
 
     const apiUrl=process.env.REACT_APP_API_URL;
+    const [isLoading,setIsLoading] = useState(false);
     // sending[POST] Signup cradantial to BackEnd & getting response
     const HandelSubmit=async(e)=>{
         e.preventDefault();
-
+        setIsLoading(true);
         const response = await fetch(`${apiUrl}/signup` , {
             method: "POST",
             credentials: 'include',
@@ -41,9 +42,11 @@ const Signup =()=>{
         // console.log(data)
 
         if(data.result === "succese"){
-              navigate('/login'); //Navigating to Login page 
+            setIsLoading(false);
+            navigate('/login'); //Navigating to Login page 
         }else{
             wrong();
+            setIsLoading(false);
         }
     }
 
@@ -81,6 +84,7 @@ const Signup =()=>{
                             </tr>
                             </tbody>
                         </table>
+                        { isLoading?<><span class="loader"></span><p style={{'textAlign':'center'}}>Processing please Wait</p></>:""}
                         <button className="btn_signup" type="submit">Signup</button>
                         <br />
                         <button className="btn_signup_login" onClick={()=>{navigate("/login")}}>Alredy Have Account? Log in</button>        
