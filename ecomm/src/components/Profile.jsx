@@ -36,7 +36,7 @@ const Profile=()=>{
     }
      useEffect(()=>{
         GetUserDetails();
-    })
+    },[])
 
         // Logout feature
         const logout=()=>{
