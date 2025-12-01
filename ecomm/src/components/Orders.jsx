@@ -29,11 +29,11 @@ const Orders=()=>{
         }else{
             empty();
         }
-    }
+    }    
     
     useEffect(()=>{
         get_existing_orders();
-    });
+    },[]);
     
     useEffect(()=>{
         console.log(orders);
