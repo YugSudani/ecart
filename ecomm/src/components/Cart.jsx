@@ -39,7 +39,7 @@ const Cart=()=>{
 
     useEffect(()=>{
         get_user_cart_products();
-    })
+    },[])
 
 //above taking ids from user accound
 //below taking products with that ids into cart
@@ -90,7 +90,7 @@ const genContext = useGenContext();  //declared alredy
 
     useEffect(()=>{
         UpdateGenCtxt(); // For onLoad update 
-    });
+    },[]);
 
     //____________________________________________________________
 
@@ -126,7 +126,7 @@ const Total=(()=>{
 
    useEffect(()=>{
         Total(); // For onLoad update 
-    });
+    },[]);
 
 
 
